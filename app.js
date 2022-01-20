@@ -35,3 +35,44 @@ function nameSwap(str) {
 }
 console.log(nameSwap("Abraham Lincoln"));
 console.log(nameSwap("Hank Aaron"));
+
+// Remove Odd Numbers From an Array
+
+// Challenge
+// Create a function that takes an array of numbers and returns only the even values.
+// The function should return an array containing only even numbers
+
+// Examples
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] -> [2, 4, 6, 8, 10]
+// [21, 26, 28, 29] -> [26, 28]
+
+// Approach 1 - for loop
+
+// Tools
+// for statement
+// http://bit.ly/for-loop-javascript
+// remainder/modulus operator
+// http://bit.ly/remainder-operator
+//  Array.prototype.push()
+// http://bit.ly/array-push
+
+function evensOnly(arr) {
+  // Step 1 -> Declare  `evenArray` variable and set to empty array
+  let evenArray = [];
+  // Step 2 -> Loop through entire array of numbers
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evenArray.push(arr[i]);
+    }
+  }
+  return evenArray;
+}
+
+console.log(evensOnly1([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log(evensOnly1([21, 26, 28, 29]));
+
+function evensOnly1(arr) {
+  let evenArray = [];
+  let evenFilter = arr.filter((x) => x % 2 === 0);
+  return evenFilter;
+}
