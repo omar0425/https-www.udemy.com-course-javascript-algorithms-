@@ -27,3 +27,11 @@ function nameSwap(str) {
 console.log(nameSwap("Abraham Lincoln"));
 console.log(nameSwap("Hank Aaron"));
 //One Line ➡️ return str.split(' ').reverse().join(' ')
+
+//Indices
+function nameSwap(str) {
+  let arr = str.split(" ");
+  return arr[1] + " " + arr[0];
+}
+console.log(nameSwap("Abraham Lincoln"));
+console.log(nameSwap("Hank Aaron"));
